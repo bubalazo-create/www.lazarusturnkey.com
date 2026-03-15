@@ -119,6 +119,29 @@ document.addEventListener('DOMContentLoaded', () => {
         currentYearSpan.textContent = new Date().getFullYear();
     }
 
+    // 6. Scroll Reveal Animation
+    const revealElements = document.querySelectorAll('.reveal');
+    
+    if (revealElements.length > 0 && 'IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    // Stagger the reveal with a slight delay per element
+                    setTimeout(() => {
+                        entry.target.classList.add('revealed');
+                    }, index * 100);
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.15,
+            rootMargin: '0px 0px -40px 0px'
+        });
 
+        revealElements.forEach(el => revealObserver.observe(el));
+    } else {
+        // Fallback: just show everything
+        revealElements.forEach(el => el.classList.add('revealed'));
+    }
 
 });
