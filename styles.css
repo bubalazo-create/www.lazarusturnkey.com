@@ -12,6 +12,8 @@
     --color-secondary: #1a2332;
     --color-secondary-light: #2e3e52;
     --color-accent: #e8a44a;
+    color-scheme: light;
+
 
     /* Neutral Colors */
     --color-bg: #fafbfc;
@@ -251,6 +253,16 @@ ul {
 .navbar.scrolled .nav-logo {
     height: 60px;
 }
+
+@media (max-width: 768px) {
+    .nav-logo {
+        height: 70px;
+    }
+    .navbar.scrolled .nav-logo {
+        height: 45px;
+    }
+}
+
 
 .nav-menu {
     display: flex;
@@ -1191,18 +1203,29 @@ ul {
     left: 0;
     width: 100%;
     background: linear-gradient(90deg, var(--color-primary), var(--color-primary-dark));
-    color: var(--color-white);
+    background-color: var(--color-primary); /* Fallback */
+    color: var(--color-white) !important;
     text-align: center;
-    padding: 10px 40px;
+    padding: 8px 40px;
     z-index: 10001; /* Above navbar */
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    line-height: 1.4;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
     justify-content: center;
     animation: bannerPulse 3s infinite;
+    min-height: 40px;
 }
+
+@media (max-width: 600px) {
+    .construction-banner {
+        padding: 8px 30px;
+        font-size: 0.75rem;
+    }
+}
+
 
 .construction-close {
     position: absolute;
