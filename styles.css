@@ -1021,15 +1021,15 @@ ul {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    background: linear-gradient(135deg, #25d366, #128c7e);
+    background: #25d366;
     color: white;
     width: 60px;
     height: 60px;
-    border-radius: 50%;
+    border-radius: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 28px;
+    font-size: 40px;
     box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
     z-index: 999;
     transition: var(--transition-bounce);
@@ -1048,7 +1048,7 @@ ul {
     position: absolute;
     width: 100%;
     height: 100%;
-    border-radius: 50%;
+    border-radius: 14px;
     background: rgba(37, 211, 102, 0.3);
     animation: whatsappPulse 2s infinite;
     z-index: -1;
@@ -1166,7 +1166,7 @@ ul {
         right: 20px;
         width: 54px;
         height: 54px;
-        font-size: 24px;
+        font-size: 36px;
     }
 }
 
