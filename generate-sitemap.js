@@ -3,7 +3,7 @@ const path = require('path');
 
 const DOMAIN = 'https://www.lazarusturnkey.com';
 const FOLDER = __dirname;
-const IGNORE_FILES = ['temp_index.html'];
+const IGNORE_FILES = ['temp_index.html', 'make-favicon.html'];
 
 function generateSitemap() {
     try {
