@@ -144,4 +144,26 @@ document.addEventListener('DOMContentLoaded', () => {
         revealElements.forEach(el => el.classList.add('revealed'));
     }
 
+    // 7. Lightbox for Galleries
+    const lightbox = document.createElement('div');
+    lightbox.id = 'lightbox';
+    lightbox.className = 'lightbox';
+    document.body.appendChild(lightbox);
+
+    const lightboxImg = document.createElement('img');
+    lightbox.appendChild(lightboxImg);
+
+    const galleryImages = document.querySelectorAll('.service-gallery img, .project-img, .photo-gallery img, .about-image-wrapper img');
+    galleryImages.forEach(img => {
+        img.style.cursor = 'pointer';
+        img.addEventListener('click', () => {
+            lightbox.classList.add('active');
+            lightboxImg.src = img.src;
+        });
+    });
+
+    lightbox.addEventListener('click', () => {
+        lightbox.classList.remove('active');
+    });
+
 });

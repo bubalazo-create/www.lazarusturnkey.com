@@ -29,6 +29,9 @@
         .breadcrumb a { color: var(--color-primary); }
         .breadcrumb a:hover { text-decoration: underline; }
         .photo-placeholder { background: var(--color-bg-alt); border-radius: var(--radius-md); height: 250px; display: flex; align-items: center; justify-content: center; color: var(--color-text-light); font-size: 0.9rem; margin: 1.5rem 0; border: 2px dashed var(--color-border); text-align: center; }
+        .service-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 2rem 0; }
+        .service-gallery img { width: 100%; height: 200px; object-fit: cover; border-radius: var(--radius-md); box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease; cursor: pointer; }
+        .service-gallery img:hover { transform: scale(1.02); }
         @media (max-width: 768px) { .content-grid { grid-template-columns: 1fr; } .sidebar-card { position: static; } }
     </style>
 </head>
@@ -71,7 +74,14 @@
                     <p>At Lazarus Turnkey Contractor, our certified electricians handle every aspect of electrical work — from the initial rough-in wiring on a shell property to the final connection of fixtures and smart home systems. We work on both residential apartments and villas, ensuring all installations comply with Maltese building regulations.</p>
                     <p>Whether you are finishing a new apartment from scratch or upgrading an existing property, we provide a full electrical service that integrates safely and neatly into your finishes.</p>
 
-                    <div class="photo-placeholder">📷 Photos coming soon</div>
+                    <div class="service-gallery">
+                        <img src="Electrical/DB%20AC%20Lija.jpg" alt="Distribution Board Installation Lija" loading="lazy">
+                        <img src="Electrical/DB%20Lija.jpg" alt="Electrical Distribution Board Lija" loading="lazy">
+                        <img src="Electrical/DB%20Naxxar.jpg" alt="Distribution Board Naxxar" loading="lazy">
+                        <img src="Electrical/DB%20Office%20Valletta.jpg" alt="Office Electrical Setup Valletta" loading="lazy">
+                        <img src="Electrical/Electrical%20Gzira.jpg" alt="Electrical Work Gzira" loading="lazy">
+                        <img src="Electrical/Office%20St.%20Julian's.jpg" alt="Office Electrical Setup in St. Julian's" loading="lazy">
+                    </div>
 
                     <h3>What Our Electrical Service Includes</h3>
                     <ul>
